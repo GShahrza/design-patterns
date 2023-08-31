@@ -1,4 +1,4 @@
-package com.company.design_patterns.structural.decorator;
+package com.company.design_patterns.structural.decorator.example1;
 
 public class Iphone11 extends  PhoneDecorator{
 
