@@ -4,6 +4,11 @@ Gang of Four (GoF) kitabındakı **23 design pattern**-in hamısı üçün Java 
 Hər pattern-in öz paketi, `Main` sinfi (işə salmaq üçün) və Azərbaycan dilində `README.md` təsviri var:
 problem, həll, struktur, nə vaxt istifadə etməli, üstünlüklər/çatışmazlıqlar və JDK-dan real nümunələr.
 
+## 📖 Bələdçi (qısa kitab)
+
+Hər pattern kitab üslubunda ayrıca fəsildə izah olunub: həyatdan analogiya, problem, addım-addım həll, əvvəl və sonra müqayisəsi, tapşırıqlar.
+**[Bələdçini oxumağa başla →](docs/README.md)**
+
 ## İşə salmaq
 
 ```bash
