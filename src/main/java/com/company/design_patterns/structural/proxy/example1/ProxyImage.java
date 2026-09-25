@@ -3,7 +3,7 @@ package com.company.design_patterns.structural.proxy.example1;
 public class ProxyImage implements Image{
 
     private RealImage realImage;
-    private String fileName;
+    private final String fileName;
 
     public ProxyImage(String fileName){
         this.fileName = fileName;
@@ -12,7 +12,7 @@ public class ProxyImage implements Image{
     @Override
     public void display() {
         if(realImage == null){
-            realImage = new RealImage("example");
+            realImage = new RealImage(fileName);
         }
         realImage.display();
     }

@@ -1,23 +1,24 @@
 package com.company.design_patterns.structural.decorator.example1;
 
-public class Iphone11Pro extends PhoneDecorator{
+/** Decorator: "Pro" versiyası — +1 kamera və qiymət artımı. */
+public class Iphone11Pro extends PhoneDecorator {
 
     public Iphone11Pro(Phone basicPhone) {
         super(basicPhone);
     }
 
     @Override
-    public double getPrice() {
-        return basicPhone.getPrice() + 100;
-    }
-
-    @Override
     public String getName() {
-        return basicPhone.getName() + "11 Pro";
+        return super.getName() + " Pro";
     }
 
     @Override
     public int cameraCount() {
-        return super.cameraCount() + 1 ;
+        return super.cameraCount() + 1;
+    }
+
+    @Override
+    public double getPrice() {
+        return super.getPrice() + 300;
     }
 }

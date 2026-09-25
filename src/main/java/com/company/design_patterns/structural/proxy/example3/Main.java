@@ -8,6 +8,12 @@ public class Main {
         ManagerProxy managerProxy = new ManagerProxy("yusuf", "12345");
 
         BigDecimal ciro = managerProxy.getCiro();
-        System.out.println("Şirket Cirosu: " + ciro);
+        System.out.println("Şirkət dövriyyəsi: " + ciro);
+
+        try {
+            new ManagerProxy("ayse", "1234").getCiro();
+        } catch (SecurityException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

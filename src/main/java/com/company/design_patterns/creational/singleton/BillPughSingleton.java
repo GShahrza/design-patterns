@@ -10,7 +10,7 @@ public class BillPughSingleton {
         return SingletonHelper.INSTANCE;
     }
 
-    public static class SingletonHelper{
+    private static class SingletonHelper {
         private static final BillPughSingleton INSTANCE = new BillPughSingleton();
     }
 

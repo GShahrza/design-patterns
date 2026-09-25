@@ -6,15 +6,15 @@ public class RealImage implements Image{
 
     public RealImage(String fileName) {
         this.fileName = fileName;
-        loadFrmDisk(fileName);
+        loadFromDisk(fileName);
     }
 
-    private void loadFrmDisk(String fileName) {
+    private void loadFromDisk(String fileName) {
         System.out.println("Loading " + fileName);
     }
 
     @Override
     public void display() {
-        System.out.println("Displaying + " + fileName);
+        System.out.println("Displaying " + fileName);
     }
 }

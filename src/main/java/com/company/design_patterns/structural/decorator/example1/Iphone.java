@@ -1,10 +1,11 @@
 package com.company.design_patterns.structural.decorator.example1;
 
-public class Iphone implements Phone{
+/** Concrete component: bazaya aid telefon, dekoratorlar bunun üzərinə xüsusiyyət əlavə edir. */
+public class Iphone implements Phone {
 
     @Override
     public String getName() {
-        return "Iphone 11 ";
+        return "iPhone 11";
     }
 
     @Override
@@ -14,6 +15,6 @@ public class Iphone implements Phone{
 
     @Override
     public double getPrice() {
-        return 999.99;
+        return 699.99;
     }
 }
