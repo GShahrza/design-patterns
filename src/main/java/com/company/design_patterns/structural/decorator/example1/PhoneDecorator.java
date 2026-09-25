@@ -1,13 +1,13 @@
 package com.company.design_patterns.structural.decorator.example1;
 
-public class PhoneDecorator implements Phone{
+/** Base decorator: bütün çağırışları bükdüyü (wrap) obyektə ötürür. */
+public abstract class PhoneDecorator implements Phone {
 
-    protected Phone basicPhone;
+    protected final Phone basicPhone;
 
-    public PhoneDecorator(Phone basicPhone) {
+    protected PhoneDecorator(Phone basicPhone) {
         this.basicPhone = basicPhone;
     }
-
 
     @Override
     public String getName() {

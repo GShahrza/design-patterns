@@ -1,11 +1,15 @@
 package com.company.design_patterns.creational.prototype;
 
-public abstract class Shape implements Cloneable{
+/**
+ * Prototype: obyekt özünü klonlamağı bacarır, beləliklə yeni obyekt "sıfırdan" yaradılmır,
+ * mövcud nümunədən (prototype) kopyalanır.
+ */
+public abstract class Shape implements Cloneable {
 
     private String id;
     protected String type;
 
-    abstract void draw();
+    public abstract void draw();
 
     public String getId() {
         return id;
@@ -19,18 +23,13 @@ public abstract class Shape implements Cloneable{
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public Object clone(){
-        Object clone = null;
-
-        try{
-            clone = super.clone();
-        }catch (CloneNotSupportedException ex){
-            ex.printStackTrace();
+    @Override
+    public Shape clone() {
+        try {
+            // Shallow copy: burada yalnız String (immutable) sahələr var, ona görə kifayətdir.
+            return (Shape) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError("Shape implements Cloneable", e);
         }
-        return clone;
     }
 }

@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class ManagerProxy implements CompanyInformation{
 
-    private TruthManager truthManager;
+    private final TruthManager truthManager;
 
     private String username;
     private String password;
@@ -33,9 +33,9 @@ public class ManagerProxy implements CompanyInformation{
 
         boolean userManager = isUserManager();
 
-        if (userManager){
-            return truthManager.getCiro();
+        if (!userManager) {
+            throw new SecurityException("Access denied: '" + username + "' is not a manager");
         }
-        return null;
+        return truthManager.getCiro();
     }
 }
